@@ -40,7 +40,7 @@ func main() {
 	}()
 
 	for i := 0; i < 100; i++ {
-		if i == 34 || i == 67 || i == 99{
+		if i == 34 || i == 67 || i == 99 {
 			<-ch
 		}
 		fmt.Print("\r")
@@ -57,6 +57,7 @@ func main() {
 
 	fmt.Print("\r")
 	fmt.Print("den done")
+	fmt.Println("")
 
 	cmd := exec.Command("docker-compose", "-f", path, "ps")
 	var out bytes.Buffer
