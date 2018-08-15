@@ -56,6 +56,7 @@ func main() {
 	}
 
 	fmt.Print("\r")
+	fmt.Println("")
 	fmt.Print("den done")
 	fmt.Println("")
 
