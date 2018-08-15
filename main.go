@@ -72,7 +72,7 @@ func getStr(i int) string {
 		return " down"
 	}
 	if i > 66 {
-		return " up"
+		return " up  "
 	}
 	return " pull"
 }
