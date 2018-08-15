@@ -63,7 +63,7 @@ func main() {
 	cmd.Stdout = &out
 
 	cmd.Run()
-	fmt.Print(out.String())
+	fmt.Println(out.String())
 	close(ch)
 }
 
