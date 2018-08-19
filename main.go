@@ -6,6 +6,7 @@ import (
 	"os/exec"
 	"bytes"
 	"time"
+	"strings"
 )
 
 func main() {
@@ -43,15 +44,20 @@ func main() {
 		if i == 34 || i == 67 || i == 99 {
 			<-ch
 		}
+		bold := []string{}
+		swallow := []string{}
+
 		fmt.Print("\r")
 		for v := 0; v < 100; v++ {
 			if v < i {
-				fmt.Print("▇")
+				bold = append(bold, "▇")
 			} else {
-				fmt.Print(" ")
+				swallow = append(swallow, " ")
 			}
 		}
-		fmt.Print(" ", i+1, "%", getStr(i))
+		fmt.Print(strings.Join(bold, ""),
+			strings.Join(swallow, ""),
+			" ", i+1, "%", getStr(i))
 		time.Sleep(50 * time.Millisecond)
 	}
 
